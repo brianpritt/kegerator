@@ -6,7 +6,7 @@ import{ Keg } from './keg.model';
   template:
   `
   <div>
-    <div *ngIf="childNewKeg">
+    <div *ngIf="childNewKeg" class="beers add-form">
       <h3>Add Keg Info</h3>
       <label>Enter keg name:</label>
       <input #newName>
@@ -16,7 +16,7 @@ import{ Keg } from './keg.model';
       <input #newPrice>
       <label>Enter ABV:</label>
       <input #newAlcoholContent>
-      <button class="btn-floating btn-large waves-effect waves-light red" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); doneAdding()"><i class="material-icons">Add</i></button>
+      <button class="btn-floating btn-large waves-effect waves-light red" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newAlcoholContent.value); doneAdding()">Add</button>
     </div>
   </div>
   `

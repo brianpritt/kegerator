@@ -1,6 +1,4 @@
-li{
-  list-style: none;
-}
+
 body{
   background-image: url("../../resources/img/beer.jpg");
   background-repeat: no-repeat;
@@ -10,4 +8,15 @@ body{
 
 button {
   margin-bottom: 10px;
+}
+
+.panel{
+  height:400px;
+}
+.beers{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 9px;
+}
+.add-form{
+  padding: 8px;
 }

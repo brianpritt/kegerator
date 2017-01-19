@@ -5,16 +5,18 @@ import { Keg } from './keg.model';
   selector: 'keg-list',
   template:
   `
-
+  <!--<select>
+    <option value="allKegs">All Kegs</option>
+    <option value="nearlyEmpty">Nearly Empty</option>
+    <option value="spent">Spent</option>
+  </select>-->
   <div  *ngFor='let currentKeg of childKegList | fullness'>
-    <div class="col s3">
+    <div class="beers panel col s3">
       <h3>{{currentKeg.name}} : {{currentKeg.brand}}</h3>
-      <ul>
         <div></div>
         <div>Price: {{currentKeg.price}}</div>
         <div>ABV: {{currentKeg.alcoholContent}}</div>
         <div>Pints available: {{currentKeg.volume/16}}</div>
-      </ul>
       <button class="btn waves-effect waves-light" (click)='editKeg(currentKeg)'>Edit!</button>
       <button class="btn waves-effect waves-light" (click)='isItKicked(currentKeg); pourDrink(currentKeg)'>Get a Pour!</button>
     </div>

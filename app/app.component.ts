@@ -8,12 +8,11 @@ import { Keg } from './keg.model'
     <h2>Duff Man Brewery</h2>
     <div class="row">
       <keg-list [childKegList]="masterKegList" (clickSender)="editKeg($event)" (volumeSender)="pourDrink($event)" (kickedSender)="isItKicked($event)"></keg-list>
+      
     </div>
-    <hr>
     <div class="row">
       <edit-keg [childSelectedKeg]="selectedKeg" (doneEditingSender)="doneEditing()" ></edit-keg>
     </div>
-    <hr>
     <add-keg (newAddSender)="doneAdding()" (newKegSender)="addKeg($event)" [childNewKeg]="newKeg"></add-keg>
     <button class="btn-floating btn-large waves-effect waves-light red" *ngIf="!newKeg" (click)="addKegFormShow()">Add</button>
   </div>
