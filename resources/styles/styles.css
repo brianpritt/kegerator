@@ -1,0 +1,13 @@
+li{
+  list-style: none;
+}
+body{
+  background-image: url("../../resources/img/beer.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+button {
+  margin-bottom: 10px;
+}

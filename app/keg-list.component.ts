@@ -5,22 +5,35 @@ import { Keg } from './keg.model';
   selector: 'keg-list',
   template:
   `
-  <div class="col-md-3" *ngFor='let currentKeg of childKegList'>
-  <h3>{{currentKeg.name}}</h3>
-  <ul>
-    <li>{{currentKeg.brand}}</li>
-    <li>{{currentKeg.price}}</li>
-    <li>{{currentKeg.alcoholContent}}</li>
-  </ul>
-  <button class="btn" (click)='editKeg(currentKeg)'>Edit!</button>
+
+  <div  *ngFor='let currentKeg of childKegList | fullness'>
+    <div class="col s3">
+      <h3>{{currentKeg.name}} : {{currentKeg.brand}}</h3>
+      <ul>
+        <div></div>
+        <div>Price: {{currentKeg.price}}</div>
+        <div>ABV: {{currentKeg.alcoholContent}}</div>
+        <div>Pints available: {{currentKeg.volume/16}}</div>
+      </ul>
+      <button class="btn waves-effect waves-light" (click)='editKeg(currentKeg)'>Edit!</button>
+      <button class="btn waves-effect waves-light" (click)='isItKicked(currentKeg); pourDrink(currentKeg)'>Get a Pour!</button>
+    </div>
   </div>
   `
 })
 export class KegListComponent{
   @Input() childKegList: Keg[];
   @Output() clickSender = new EventEmitter();
+  @Output() volumeSender = new EventEmitter();
+  @Output() kickedSender = new EventEmitter();
 
   editKeg(kegToEdit: Keg) {
-    this.clickSender.emit(kegToEdit)
+    this.clickSender.emit(kegToEdit);
+  }
+  pourDrink(currentKeg) {
+    this.volumeSender.emit(currentKeg);
+  }
+  isItKicked(currentKeg){
+    this.kickedSender.emit(currentKeg);
   }
 }

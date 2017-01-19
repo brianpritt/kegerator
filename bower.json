@@ -7,7 +7,7 @@
     "Adam Zinder <adam.zinder@gmail.com"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/brianpritt/kegerator",
   "ignore": [
     "**/.*",
     "node_modules",

@@ -47,5 +47,13 @@
   },
   "main": "gulpfile.js",
   "author": "",
-  "description": ""
+  "description": "\\",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianpritt/kegerator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brianpritt/kegerator/issues"
+  },
+  "homepage": "https://github.com/brianpritt/kegerator#readme"
 }
