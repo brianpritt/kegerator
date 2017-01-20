@@ -11,7 +11,7 @@ button {
 }
 
 .panel{
-  height:400px;
+  height:200px;
 }
 .beers{
   background-color: rgba(0, 0, 0, 0.5);
@@ -19,4 +19,26 @@ button {
 }
 .add-form{
   padding: 8px;
+}
+
+.beer-title {
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.glass {
+			height: 168px;
+      width: 155px;
+			position: relative;
+			background-image: url("../../resources/img/beer-backer.png");
+			background-repeat: no-repeat;
+
+		}
+.liquid {
+  z-index:-1;
+  position:absolute;
+  bottom:0;
+  width: 155px;
+
+  background-image: -webkit-linear-gradient(bottom, rgb(255, 136, 0), rgb(255, 203, 0))
 }

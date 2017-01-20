@@ -23,5 +23,17 @@
   <!-- 3. Display the application -->
   <body>
     <app-root>Loading...</app-root>
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAVVpBKjStyRfgWYthzJnsPHekLofixpfM",
+    authDomain: "beer-app-feb81.firebaseapp.com",
+    databaseURL: "https://beer-app-feb81.firebaseio.com",
+    storageBucket: "beer-app-feb81.appspot.com",
+    messagingSenderId: "1017798750261"
+  };
+  firebase.initializeApp(config);
+</script>
   </body>
 </html>
